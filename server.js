@@ -10,6 +10,9 @@ app.use(express.json());
 
 app.use("/api/auth", Authrouter);
 app.use("/api/products", Productrouter);
+app.get("/", (req, res) => {
+  res.send("API is running on render...");
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
